@@ -1,9 +1,13 @@
 import React from 'react';
 
+import GlobalStyles from './assets/styles/global';
+import Routes from './routes';
+
 const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>Helow</h1>
+      <GlobalStyles />
+      <Routes />
     </div>
   );
 };
