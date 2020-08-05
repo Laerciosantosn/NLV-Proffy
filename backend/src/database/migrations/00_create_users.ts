@@ -5,7 +5,7 @@ export async function up(knex: Knex): Promise<void> {
     table.increments('id').primary();
     table.string('name').notNullable();
     table.string('avatar').notNullable();
-    table.string('watsapp').notNullable();
+    table.string('whatsapp').notNullable();
     table.string('bio').notNullable();
   });
 }

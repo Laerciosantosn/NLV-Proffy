@@ -23,6 +23,10 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "@typescript-eslint/no-var-requires": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/camelcase": "off",
+    "camelcase":"off",
     "prettier/prettier": "error",
     "import/extensions": [
       "error",
