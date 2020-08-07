@@ -112,7 +112,7 @@ export const ButtonsContainer = styled.div`
     }
 
     &.give-classes {
-      background: var(--color-secundary);
+      background: var(--color-secondary);
     }
 
     &.study:hover {
@@ -120,7 +120,7 @@ export const ButtonsContainer = styled.div`
     }
 
     &.give-classes:hover {
-      background: var(--color-secundary-dark);
+      background: var(--color-secondary-dark);
     }
   }
 `;

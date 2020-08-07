@@ -56,10 +56,10 @@ export const Article = styled.article`
       display: block;
     }
 
-    & button {
+    & a {
       width: 20rem;
       height: 5.6rem;
-      background: var(--color-secundary);
+      background: var(--color-secondary);
       color: var(--color-button-text);
       border: 0;
       border-radius: 0.8rem;
@@ -71,7 +71,7 @@ export const Article = styled.article`
       transition: 0.2s;
 
       &:hover {
-        background: var(--color-secundary-dark);
+        background: var(--color-secondary-dark);
       }
     }
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import logoImg from '../../assets/images/logo.svg';
@@ -15,8 +15,18 @@ import {
   ButtonsContainer,
   ConnnectionContainer,
 } from './styles';
+import api from '../../services/api';
 
-const Dashboard: React.FC = () => {
+const Landing: React.FC = () => {
+  const [totalConections, setTotalConections] = useState(0);
+
+  useEffect(() => {
+    api.get('connections').then(response => {
+      const { total } = response.data;
+      setTotalConections(total);
+    });
+  }, []);
+
   return (
     <Container className="page-landing">
       <Content
@@ -47,7 +57,7 @@ const Dashboard: React.FC = () => {
         </ButtonsContainer>
 
         <ConnnectionContainer className="total-connections">
-          Total de 5604 conexões já realizadas
+          Total de {totalConections} conexões já realizadas
           <img src={purpleHeatIcon} alt="Purple Heart" />
         </ConnnectionContainer>
       </Content>
@@ -55,4 +65,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default Landing;

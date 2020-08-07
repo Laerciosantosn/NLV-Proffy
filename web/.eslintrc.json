@@ -29,7 +29,12 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-one-expression-per-line": "off",
     "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",

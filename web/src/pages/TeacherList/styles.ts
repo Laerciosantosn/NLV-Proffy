@@ -13,16 +13,38 @@ export const Container = styled.div`
 
     & form {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr) 60px;
       column-gap: 16px;
       position: absolute;
       bottom: -28px;
-    }
 
-    .input-block + .input-block {
+      & button {
+        width: 100%;
+        height: 5.6rem;
+        background: var(--color-secondary);
+        color: var(--color-button-text);
+        border: 0;
+        border-radius: 0.8rem;
+        cursor: pointer;
+        font: 700 1.6rem Archivo;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s;
+        margin-top: 4.5rem;
+      }
+
+      & button:hover {
+        background: var(--color-secondary-dark);
+      }
+    }
+    /*
+    & .input-block + .input-block {
       margin-top: 0;
+    } */
+    & .select-block {
+      margin-bottom: 0;
     }
-
     & main {
       padding: 3.2rem 0;
       max-width: 740px;
@@ -60,41 +82,6 @@ export const Form = styled.form`
 
   & label {
     color: var(--color-text-in-primary);
-  }
-
-  & div {
-    position: relative;
-
-    & + div {
-      margin-top: 1.4rem;
-    }
-
-    & label {
-      font-size: 1.4rem;
-    }
-
-    &:focus-within::after {
-      width: calc(100% - 3.2rem);
-      height: 2px;
-      content: '';
-      background: var(--color-primary-light);
-      position: absolute;
-      left: 1.6rem;
-      right: 1.6rem;
-      bottom: 0;
-    }
-  }
-
-  & input {
-    width: 100%;
-    height: 5.6rem;
-    margin-top: 0.8rem;
-    border-radius: 0.8rem;
-    background-color: var(--color-input-background);
-    border: 1px solid var(--color-line-in-white);
-    outline: 0;
-    padding: 0 1.6rem;
-    font: 1.6rem Archivo;
   }
 `;
 
