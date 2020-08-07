@@ -10,7 +10,8 @@ import {
   Archivo_400Regular,
   Archivo_700Bold,
 } from '@expo-google-fonts/archivo';
-import Landing from './src/pages/Landing';
+
+import AppStack from './src/routes/AppStack';
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
@@ -26,7 +27,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Landing />
+      <AppStack />
       <StatusBar style="light" />
     </>
   );
